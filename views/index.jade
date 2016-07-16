@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title 电影风云榜
+        link(rel="stylesheet",href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    body
+        .container
+            .panel.panel-primary
+                .panel-heading.text-center 电影风云榜
+                .panel-body
+                    ul.list-group
+                        each movie in movies
+                            li.list-group-item
+                                a(href="#{movie.url}")=movie.name
